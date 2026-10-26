@@ -11,27 +11,24 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* Sonic Official Artwork Gallery */
+        /* SONIC DISCOVERY ZONE - 30 ARTWORK FRAMES */
 
         .artwork-page {
-            width: min(1050px, 94%);
+            width: min(1100px, 94%);
             margin: 25px auto;
         }
 
         .artwork-page section {
             margin-bottom: 25px;
             padding: 22px;
-
             background: linear-gradient(
                 135deg,
-                #07104e 0%,
+                #07104e,
                 #152575 55%,
-                #2949b5 100%
+                #2949b5
             );
-
             border: 3px solid #ffe500;
             border-radius: 8px;
-            color: white;
         }
 
         .artwork-page h2 {
@@ -40,41 +37,74 @@
             padding-bottom: 10px;
         }
 
-        /* Gallery Layout */
+        /* GALLERY GRID */
 
         .artwork-gallery {
             display: grid;
             grid-template-columns:
-                repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+                repeat(auto-fit, minmax(210px, 1fr));
+            gap: 18px;
             margin-top: 20px;
         }
 
-        /* Artwork Cards */
+        /* INDIVIDUAL FRAMES */
 
         .artwork-card {
+            min-width: 0;
+            padding: 12px;
+            text-align: center;
+
             background: linear-gradient(
                 180deg,
-                #1769d8,
-                #07145e
+                #1775e5,
+                #09277f,
+                #050d4e
             );
 
             border: 2px solid #ffe500;
             border-radius: 8px;
-            padding: 12px;
-            text-align: center;
 
             box-shadow: 0 0 12px #00bfff;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
         }
 
-        .artwork-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: contain;
+        .artwork-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px #ffe500;
+        }
 
-            background: #06104c;
-            border: 2px solid #73dfff;
+        /* ARTWORK PLACEHOLDERS */
+
+        .artwork-placeholder {
+            aspect-ratio: 4 / 3;
+            min-height: 170px;
+            padding: 15px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            background: linear-gradient(
+                135deg,
+                #06165f,
+                #168de8,
+                #07145e
+            );
+
+            border: 2px dashed #73dfff;
             border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .frame-number {
+            color: #ffe500;
+            font-size: 1.3rem;
         }
 
         .artwork-card h3 {
@@ -88,43 +118,20 @@
             font-size: 0.85rem;
         }
 
-        /* Placeholder Images */
+        /* FUTURE ARTWORK IMAGES */
 
-        .artwork-placeholder {
-            height: 220px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: linear-gradient(
-                135deg,
-                #06227e,
-                #168de8,
-                #05105a
-            );
-
-            border: 2px dashed #73dfff;
+        .artwork-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            height: auto;
+            object-fit: contain;
+            background: #06104c;
+            border: 2px solid #73dfff;
             border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            padding: 15px;
         }
 
-        /* Hover Effect */
-
-        .artwork-card:hover {
-            box-shadow: 0 0 20px #ffe500;
-            transform: translateY(-4px);
-        }
-
-        .artwork-card {
-            transition: transform 0.2s,
-                        box-shadow 0.2s;
-        }
-
-        /* Mobile Layout */
+        /* RESPONSIVE DESIGN */
 
         @media (max-width: 600px) {
             .artwork-page section {
@@ -132,8 +139,15 @@
             }
 
             .artwork-gallery {
+                grid-template-columns:
+                    repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .artwork-gallery {
                 grid-template-columns: 1fr;
-                gap: 15px;
             }
         }
     </style>
@@ -143,7 +157,7 @@
 
 <header>
     <h1>SONIC OFFICIAL ARTWORK GALLERY</h1>
-    <p>★ Celebrating Sonic's Official Art! ★</p>
+    <p>★ 30 Frames of Sonic Artwork! ★</p>
 
     <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -165,212 +179,361 @@
         <p>
             Welcome to Sonic Discovery Zone's
             official artwork gallery!
-            This section celebrates the
-            amazing artwork created for
-            Sonic the Hedgehog games,
-            characters, and promotional events.
+            Explore artwork from different
+            generations of Sonic the Hedgehog.
         </p>
 
         <p>
-            Explore Sonic artwork from
-            different eras, including
-            classic illustrations,
-            Sonic Adventure designs,
-            modern promotional artwork,
-            and special anniversary art.
+            This gallery contains 30 frames
+            divided into five categories.
+            Artwork will be added as
+            suitable images become available
+            and their usage permissions
+            are confirmed.
         </p>
     </section>
 
-    <!-- CLASSIC ARTWORK -->
+    <!-- CLASSIC SONIC ARTWORK -->
 
     <section>
         <h2>★ Classic Sonic Artwork ★</h2>
-
-        <p>
-            Artwork inspired by the
-            original Sonic games
-            from the Sega Genesis era.
-        </p>
+        <p>Artwork inspired by the early Sonic games.</p>
 
         <div class="artwork-gallery">
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Classic Sonic Artwork
-                    Coming Soon!
+                    <span class="frame-number">01</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Classic Sonic</h3>
-                <p>1990s Sonic illustrations</p>
+                <p>Classic-era illustration</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Classic Tails Artwork
-                    Coming Soon!
+                    <span class="frame-number">02</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Classic Tails</h3>
-                <p>Early Tails character artwork</p>
+                <p>Early character artwork</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Classic Knuckles Artwork
-                    Coming Soon!
+                    <span class="frame-number">03</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Classic Knuckles</h3>
-                <p>Classic-era character artwork</p>
+                <p>Classic-era illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">04</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Classic Amy</h3>
+                <p>Sonic CD-era artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">05</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Classic Metal Sonic</h3>
+                <p>Classic rival artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">06</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Classic Group Artwork</h3>
+                <p>Early Sonic promotional art</p>
             </article>
 
         </div>
     </section>
 
-    <!-- SONIC ADVENTURE ARTWORK -->
+    <!-- SONIC ADVENTURE ERA -->
 
     <section>
         <h2>★ Sonic Adventure Era Artwork ★</h2>
-
-        <p>
-            Explore artwork inspired by
-            Sonic Adventure, Sonic Adventure 2,
-            and the early 2000s Sonic era.
-        </p>
+        <p>Artwork inspired by the Dreamcast and early 2000s era.</p>
 
         <div class="artwork-gallery">
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Adventure Artwork
-                    Coming Soon!
+                    <span class="frame-number">07</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Adventure</h3>
-                <p>Dreamcast-era promotional artwork</p>
+                <p>Dreamcast-era artwork</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Shadow Artwork
-                    Coming Soon!
+                    <span class="frame-number">08</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic Adventure 2</h3>
+                <p>Promotional illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">09</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Shadow the Hedgehog</h3>
-                <p>Sonic Adventure 2 character artwork</p>
+                <p>Character artwork</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Heroes Artwork
-                    Coming Soon!
+                    <span class="frame-number">10</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Rouge the Bat</h3>
+                <p>Character artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">11</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Heroes</h3>
-                <p>Team-based promotional illustrations</p>
+                <p>Team promotional artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">12</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Team Dark</h3>
+                <p>Early 2000s group artwork</p>
             </article>
 
         </div>
     </section>
 
-    <!-- MODERN ARTWORK -->
+    <!-- MODERN SONIC ARTWORK -->
 
     <section>
         <h2>★ Modern Sonic Artwork ★</h2>
-
-        <p>
-            Artwork from Sonic's modern
-            adventures, featuring new
-            character designs and
-            promotional illustrations.
-        </p>
+        <p>Artwork from Sonic's adventures during the 2000s and 2010s.</p>
 
         <div class="artwork-gallery">
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Unleashed Artwork
-                    Coming Soon!
+                    <span class="frame-number">13</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic Rush</h3>
+                <p>Blaze and Sonic artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">14</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic Riders</h3>
+                <p>Extreme Gear artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">15</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic the Hedgehog (2006)</h3>
+                <p>Promotional illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">16</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Unleashed</h3>
-                <p>Promotional game artwork</p>
+                <p>Werehog-era artwork</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Colors Artwork
-                    Coming Soon!
+                    <span class="frame-number">17</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Colors</h3>
-                <p>Colorful interstellar illustrations</p>
+                <p>Wisps and space artwork</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Generations Artwork
-                    Coming Soon!
+                    <span class="frame-number">18</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Generations</h3>
-                <p>Classic and Modern Sonic artwork</p>
+                <p>Classic and Modern Sonic</p>
             </article>
 
         </div>
     </section>
 
-    <!-- RECENT ARTWORK -->
+    <!-- RECENT SONIC ARTWORK -->
 
     <section>
         <h2>★ Recent Sonic Artwork ★</h2>
-
-        <p>
-            Explore artwork inspired by
-            Sonic's newer adventures
-            and special celebrations.
-        </p>
+        <p>Artwork from Sonic's more recent adventures.</p>
 
         <div class="artwork-gallery">
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Frontiers Artwork
-                    Coming Soon!
+                    <span class="frame-number">19</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic Lost World</h3>
+                <p>Lost Hex artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">20</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic Mania</h3>
+                <p>Classic-inspired artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">21</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic Forces</h3>
+                <p>Resistance-era artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">22</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Team Sonic Racing</h3>
+                <p>Racing promotional artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">23</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Frontiers</h3>
-                <p>Starfall Islands promotional artwork</p>
+                <p>Starfall Islands artwork</p>
             </article>
 
             <article class="artwork-card">
                 <div class="artwork-placeholder">
-                    Sonic Superstars Artwork
-                    Coming Soon!
+                    <span class="frame-number">24</span>
+                    <span>Artwork Coming Soon</span>
                 </div>
                 <h3>Sonic Superstars</h3>
-                <p>Classic-style modern illustrations</p>
-            </article>
-
-            <article class="artwork-card">
-                <div class="artwork-placeholder">
-                    Anniversary Artwork
-                    Coming Soon!
-                </div>
-                <h3>Sonic Anniversary Artwork</h3>
-                <p>Special anniversary illustrations</p>
+                <p>Northstar Islands artwork</p>
             </article>
 
         </div>
     </section>
 
-    <!-- ARTWORK CREDITS -->
+    <!-- SPECIAL ARTWORK -->
+
+    <section>
+        <h2>★ Special &amp; Anniversary Artwork ★</h2>
+        <p>Artwork celebrating Sonic's history and special events.</p>
+
+        <div class="artwork-gallery">
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">25</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic 10th Anniversary</h3>
+                <p>Anniversary illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">26</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic 15th Anniversary</h3>
+                <p>Anniversary illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">27</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic 20th Anniversary</h3>
+                <p>Anniversary illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">28</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic 25th Anniversary</h3>
+                <p>Anniversary illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">29</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic 30th Anniversary</h3>
+                <p>Anniversary illustration</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    <span class="frame-number">30</span>
+                    <span>Artwork Coming Soon</span>
+                </div>
+                <h3>Sonic 35th Anniversary</h3>
+                <p>Anniversary illustration</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CREDITS -->
 
     <section>
         <h2>★ Artwork Credits ★</h2>
 
         <p>
-            Sonic the Hedgehog and its
-            characters are owned by SEGA.
-            This is an unofficial
-            fan-created website.
+            Sonic the Hedgehog and its characters
+            are owned by SEGA and their respective
+            rights holders.
         </p>
 
         <p>
-            Artwork will be added
-            with appropriate source
-            information and permission
-            where required.
+            This is an unofficial fan website.
+            Artwork will be added only when
+            appropriate permission or usage
+            rights have been confirmed.
         </p>
     </section>
 
