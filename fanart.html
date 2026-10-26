@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fanart Gallery | Sonic Discovery Zone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* SONIC DISCOVERY ZONE - FANART GALLERY */
+
+        .fanart-page {
+            width: min(1100px, 94%);
+            margin: 25px auto;
+        }
+
+        .fanart-page section {
+            margin-bottom: 25px;
+            padding: 22px;
+
+            background: linear-gradient(
+                135deg,
+                #07104e,
+                #152575 55%,
+                #2949b5
+            );
+
+            border: 3px solid #ffe500;
+            border-radius: 8px;
+        }
+
+        .fanart-page h2 {
+            color: #ffe500;
+            border-bottom: 2px solid #73dfff;
+            padding-bottom: 10px;
+        }
+
+        /* FANART GRID */
+
+        .fanart-gallery {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        /* FANART FRAMES */
+
+        .fanart-card {
+            min-width: 0;
+            padding: 12px;
+            text-align: center;
+
+            background: linear-gradient(
+                180deg,
+                #1775e5,
+                #09277f,
+                #050d4e
+            );
+
+            border: 2px solid #ffe500;
+            border-radius: 8px;
+
+            box-shadow: 0 0 12px #00bfff;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .fanart-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px #ffe500;
+        }
+
+        /* EMPTY FANART PLACEHOLDERS */
+
+        .fanart-placeholder {
+            aspect-ratio: 4 / 3;
+            min-height: 170px;
+            padding: 15px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            background: linear-gradient(
+                135deg,
+                #06165f,
+                #168de8,
+                #07145e
+            );
+
+            border: 2px dashed #73dfff;
+            border-radius: 5px;
+
+            color: white;
+            font-weight: bold;
+        }
+
+        .fanart-number {
+            color: #ffe500;
+            font-size: 1.4rem;
+        }
+
+        .fanart-card h3 {
+            color: #ffe500;
+            font-size: 1rem;
+            margin: 12px 0 5px;
+        }
+
+        .fanart-card p {
+            color: #e5faff;
+            font-size: 0.85rem;
+        }
+
+        /* FUTURE FANART IMAGES */
+
+        .fanart-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            height: auto;
+            object-fit: contain;
+
+            background: #06104c;
+            border: 2px solid #73dfff;
+            border-radius: 5px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 600px) {
+            .fanart-page section {
+                padding: 14px;
+            }
+
+            .fanart-gallery {
+                grid-template-columns:
+                    repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .fanart-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SONIC FANART GALLERY</h1>
+    <p>★ Celebrating Sonic Fan Creativity! ★</p>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="zones.html">Zones</a>
+        <a href="games.html">Games</a>
+        <a href="visual-content.html">Visual Content</a>
+        <a href="comics.html">Comics</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="fanart.html">Fanart</a>
+    </nav>
+</header>
+
+<main class="fanart-page">
+
+    <section>
+        <h2>Welcome to the Sonic Fanart Gallery!</h2>
+
+        <p>
+            Welcome to Sonic Discovery Zone's
+            fanart gallery! This section
+            celebrates the creativity
+            and imagination of Sonic fans
+            from around the world.
+        </p>
+
+        <p>
+            This gallery features 40 frames
+            for fan-created artwork.
+            As artwork is added, each
+            piece will include credit
+            to its original artist.
+        </p>
+    </section>
+
+    <!-- FANART COLLECTION 1 -->
+
+    <section>
+        <h2>★ Fanart Collection 1 ★</h2>
+        <p>Gallery frames 01–10</p>
+
+        <div class="fanart-gallery">
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">01</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #01</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">02</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #02</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">03</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #03</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">04</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #04</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">05</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #05</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">06</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #06</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">07</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #07</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">08</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #08</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">09</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #09</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">10</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #10</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FANART COLLECTION 2 -->
+
+    <section>
+        <h2>★ Fanart Collection 2 ★</h2>
+        <p>Gallery frames 11–20</p>
+
+        <div class="fanart-gallery">
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">11</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #11</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">12</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #12</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">13</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #13</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">14</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #14</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">15</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #15</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">16</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #16</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">17</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #17</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">18</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #18</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">19</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #19</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">20</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #20</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FANART COLLECTION 3 -->
+
+    <section>
+        <h2>★ Fanart Collection 3 ★</h2>
+        <p>Gallery frames 21–30</p>
+
+        <div class="fanart-gallery">
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">21</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #21</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">22</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #22</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">23</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #23</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">24</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #24</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">25</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #25</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">26</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #26</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">27</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #27</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">28</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #28</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">29</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #29</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">30</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #30</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FANART COLLECTION 4 -->
+
+    <section>
+        <h2>★ Fanart Collection 4 ★</h2>
+        <p>Gallery frames 31–40</p>
+
+        <div class="fanart-gallery">
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">31</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #31</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">32</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #32</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="fanart-card">
+                <div class="fanart-placeholder">
+                    <span class="fanart-number">33</span>
+                    <span>Fanart Coming Soon!</span>
+                </div>
+                <h3>Fanart #33</h3>
+                <p>Artist: To Be Added</p>
+            </article>
+
+            <article class="
