@@ -1,0 +1,255 @@
+/* =====================================
+   SONIC DISCOVERY ZONE
+   Retro 2000s Sonic Fan Website
+   ===================================== */
+
+/* General Website Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+
+    /* Blue gradient background */
+    background: linear-gradient(
+        125deg,
+        #050a4f 0%,
+        #1034c9 35%,
+        #0878e6 70%,
+        #00c9ef 100%
+    );
+
+    background-attachment: fixed;
+}
+
+/* Header and Website Title */
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+
+    background: linear-gradient(
+        180deg,
+        #73e5ff 0%,
+        #1688e8 35%,
+        #063ab5 70%,
+        #001b71 100%
+    );
+
+    border-bottom: 5px solid #ffe500;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #ffeb00;
+    margin: 0;
+
+    text-shadow:
+        3px 3px 0 #00145c,
+        0 0 15px #ffffff;
+}
+
+header p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Retro Navigation Menu */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    background: linear-gradient(
+        180deg,
+        #8beaff 0%,
+        #167ee7 45%,
+        #00318e 50%,
+        #0753b8 100%
+    );
+
+    border: 2px solid #ffe500;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 8px #00114d;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #00145c;
+    background: linear-gradient(
+        #fff6a0,
+        #ffdf00
+    );
+
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #ffe500;
+}
+
+/* Main Website Content */
+
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: 35px auto;
+}
+
+/* Retro Content Panels */
+
+section {
+    padding: 30px;
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #080b58 0%,
+        #12268d 55%,
+        #2445b7 100%
+    );
+
+    border: 4px solid #ffe500;
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 15px #001052,
+        0 0 12px #00bfff;
+}
+
+section h2 {
+    color: #ffe500;
+    font-size: 1.6rem;
+
+    border-bottom: 2px solid #56dfff;
+    padding-bottom: 10px;
+
+    text-shadow: 2px 2px #00145c;
+}
+
+section p {
+    font-size: 1rem;
+    color: #f0faff;
+}
+
+/* General Links */
+
+main a {
+    color: #80efff;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #ffe500;
+}
+
+a:focus-visible {
+    outline: 3px solid #ffe500;
+    outline-offset: 3px;
+}
+
+/* Image Styling */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    border: 3px solid #ffe500;
+    border-radius: 6px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+
+    background: linear-gradient(
+        180deg,
+        #0758c9,
+        #00145c
+    );
+
+    border-top: 4px solid #ffe500;
+}
+
+footer p {
+    font-size: 13px;
+    color: #d8f5ff;
+}
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Screen Adjustments */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 12px;
+    }
+}
