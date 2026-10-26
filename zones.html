@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zones | Sonic Discovery Zone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .zones-page {
+            width: min(1100px, 94%);
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .zones-page section {
+            margin-bottom: 25px;
+        }
+
+        .era-navigation,
+        .zone-directory {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .era-navigation a,
+        .zone-directory a,
+        .back-top {
+            display: inline-block;
+            padding: 8px 12px;
+            background: linear-gradient(
+                #27baff, #0646b9, #000c59
+            );
+            border: 2px solid #ffe500;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .era-navigation a:hover,
+        .zone-directory a:hover,
+        .back-top:hover {
+            background: linear-gradient(
+                #ffe500, #ff9b00
+            );
+            color: #00135b;
+        }
+
+        .zone-profile {
+            margin: 18px 0;
+            padding: 20px;
+            border: 2px solid #ffe500;
+            border-radius: 8px;
+            background: linear-gradient(
+                135deg, #081456, #2147ad
+            );
+            color: white;
+            scroll-margin-top: 20px;
+        }
+
+        .zone-profile h3 {
+            color: #ffe500;
+            font-size: 1.35rem;
+            margin-top: 0;
+        }
+
+        .zone-profile p {
+            line-height: 1.7;
+        }
+
+        .zone-profile strong {
+            color: #8deaff;
+        }
+
+        .zone-year {
+            display: inline-block;
+            background: #ffe500;
+            color: #00135b;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .zone-profile:target {
+            outline: 3px solid #75efff;
+            box-shadow: 0 0 18px #00cfff;
+        }
+
+        @media (max-width: 600px) {
+            .zone-profile {
+                padding: 14px;
+            }
+
+            .zone-profile h3 {
+                font-size: 1.15rem;
+            }
+
+            .era-navigation a,
+            .zone-directory a {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<header>
+    <h1>SONIC ZONE ENCYCLOPEDIA</h1>
+    <p>★ Explore the Worlds of Sonic! ★</p>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="zones.html">Zones</a>
+        <a href="games.html">Games</a>
+        <a href="visual-content.html">Visual Content</a>
+        <a href="comics.html">Comics</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="fanart.html">Fanart</a>
+    </nav>
+</header>
+
+<main class="zones-page">
+
+<section>
+    <h2>Welcome to the Zone Explorer!</h2>
+    <p>
+        Travel through the history of Sonic the Hedgehog!
+        Explore famous zones, mysterious islands, cities,
+        racing tracks, and other unforgettable locations.
+    </p>
+    <p>
+        Select an era or click a zone name to discover
+        more about its history and design.
+    </p>
+</section>
+
+<section>
+    <h2>★ Choose an Era ★</h2>
+    <div class="era-navigation">
+        <a href="#classic">Classic Era: 1991-1995</a>
+        <a href="#adventure">Adventure Era: 1998-2005</a>
+        <a href="#modern">Modern Era: 2006-2010</a>
+        <a href="#recent">Recent Era: 2013-2023</a>
+    </div>
+</section>
+
+<section>
+    <h2>★ Zone Selection ★</h2>
+    <div class="zone-directory" id="zone-directory">
+        <!-- Navigation links are generated below. -->
+    </div>
+</section>
+
+<div id="zone-encyclopedia"></div>
+
+<section>
+    <h2>★ More Adventures Coming Soon! ★</h2>
+    <p>
+        Sonic Discovery Zone will continue expanding
+        with more locations, screenshots, music,
+        and information from the Sonic universe!
+    </p>
+    <a class="back-top" href="#top">Back to Top</a>
+</section>
+
+</main>
+
+<footer>
+    <p>Sonic Discovery Zone | Fan Website</p>
+    <p>
+        This is an unofficial fan website
+        and is not affiliated with SEGA.
+    </p>
+</footer>
+
+<script>
+const zones = [
+    // CLASSIC ERA
+    {
+        year: 1991,
+        game: "Sonic the Hedgehog",
+        name: "Green Hill Zone",
+        featured: "Sonic Generations (Console & 3DS), Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "Green Hill is a tropical paradise with rolling grasslands, palm trees, sunflowers, checkerboard cliffs, and enormous loops. Its open pathways and fast-paced platforming make it one of Sonic's most recognizable locations."
+    },
+    {
+        year: 1992,
+        game: "Sonic the Hedgehog 2",
+        name: "Chemical Plant Zone",
+        featured: "Sonic Generations (Console), Sonic Speed Simulator",
+        description: "Chemical Plant is an enormous industrial complex filled with machinery, twisting pipes, moving platforms, and hazardous pink chemicals. Players race through high-speed passages while avoiding dangerous underwater sections."
+    },
+    {
+        year: 1992,
+        game: "Sonic the Hedgehog 2",
+        name: "Casino Night Zone",
+        featured: "Sonic Generations (3DS)",
+        description: "Casino Night transforms a brightly illuminated casino into an enormous pinball playground. Sonic bounces between bumpers, slot machines, and spring-loaded obstacles while collecting rings."
+    },
+    {
+        year: 1992,
+        game: "Sonic the Hedgehog 2",
+        name: "Emerald Hill Zone",
+        featured: "Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "Emerald Hill is a peaceful tropical landscape filled with grassy slopes, palm trees, corkscrew pathways, and ocean views. Its winding terrain encourages players to maintain their speed."
+    },
+    {
+        year: 1992,
+        game: "Sonic the Hedgehog 2",
+        name: "Hill Top Zone",
+        featured: "Sonic Speed Simulator",
+        description: "Hill Top takes place among mountains high above the clouds. Peaceful forests and rocky caverns contrast with volcanic hazards, rising lava, and challenging elevated platforms."
+    },
+    {
+        year: 1993,
+        game: "Sonic CD",
+        name: "Stardust Speedway",
+        featured: "Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "Stardust Speedway is a dazzling futuristic highway filled with colorful lights, unusual structures, and winding routes. Its different time periods transform the environment, and the zone is remembered for Sonic's rivalry with Metal Sonic."
+    },
+    {
+        year: 1994,
+        game: "Sonic the Hedgehog 3",
+        name: "Marble Garden Zone",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Marble Garden features ancient stone ruins surrounded by greenery. Crumbling structures, rotating tops, steep cliffs, and moving terrain create a challenging archaeological adventure."
+    },
+    {
+        year: 1994,
+        game: "Sonic the Hedgehog Triple Trouble",
+        name: "Sunset Park Zone",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Sunset Park is an industrial railway environment illuminated by a dramatic evening sky. Its mechanical obstacles, railways, and memorable train sequence create an unusual Sonic stage."
+    },
+    {
+        year: 1994,
+        game: "Sonic & Knuckles",
+        name: "Sky Sanctuary Zone",
+        featured: "Sonic Generations (Console), Sonic Speed Simulator",
+        description: "Sky Sanctuary is an ancient temple floating above the clouds. Stone pillars, fragile platforms, and impressive aerial architecture create a mysterious atmosphere high in the sky."
+    },
+    {
+        year: 1994,
+        game: "Sonic & Knuckles",
+        name: "Mushroom Hill Zone",
+        featured: "Sonic Generations (3DS)",
+        description: "Mushroom Hill is a colorful forest filled with giant mushrooms, dense foliage, and spring-like obstacles. Seasonal changes give the landscape different colors and appearances."
+    },
+    {
+        year: 1995,
+        game: "Knuckles' Chaotix",
+        name: "Speed Slider",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Speed Slider is a brightly colored amusement-park stage filled with twisting routes, unusual geometric structures, and fast-moving slides designed around continuous momentum."
+    },
+
+    // ADVENTURE ERA
+    {
+        year: 1998,
+        game: "Sonic Adventure",
+        name: "Speed Highway",
+        featured: "Sonic Generations (Console)",
+        description: "Speed Highway takes Sonic through a towering city skyline at night. The stage features highways, skyscrapers, traffic, and dramatic vertical sections where players race down buildings."
+    },
+    {
+        year: 1998,
+        game: "Sonic Adventure",
+        name: "Emerald Coast",
+        featured: "Sonic Generations (3DS)",
+        description: "Emerald Coast is a beautiful seaside resort with sandy beaches, wooden walkways, and sparkling ocean water. It is especially famous for a dramatic chase involving a giant killer whale."
+    },
+    {
+        year: 2001,
+        game: "Sonic Adventure 2",
+        name: "City Escape",
+        featured: "Sonic Generations (Console), Sonic Speed Simulator",
+        description: "City Escape sends Sonic racing downhill through a busy city inspired by San Francisco. Skateboarding, traffic, steep streets, and a massive pursuing truck make this one of the series' most memorable stages."
+    },
+    {
+        year: 2001,
+        game: "Sonic Adventure 2",
+        name: "Radical Highway",
+        featured: "Shadow Generations, Sonic Generations (3DS), Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "Radical Highway is a nighttime highway and suspension-bridge network associated with Shadow. Glowing red bridge cables, rails, and elevated pathways create a dramatic high-speed setting."
+    },
+    {
+        year: 2001,
+        game: "Sonic Adventure 2",
+        name: "Space Colony ARK",
+        featured: "Shadow Generations, Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "The Space Colony ARK is an enormous research station orbiting Earth. Its metallic corridors, experimental facilities, and space-based technology play an important role in Shadow's history."
+    },
+    {
+        year: 2001,
+        game: "Sonic Adventure 2",
+        name: "Pumpkin Hill",
+        featured: "Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "Pumpkin Hill is a spooky mountain environment filled with floating landmasses, pumpkin decorations, graveyards, and ghostly structures. Its eerie atmosphere makes it one of Knuckles' most memorable treasure-hunting stages."
+    },
+    {
+        year: 2003,
+        game: "Sonic Heroes",
+        name: "Seaside Hill",
+        featured: "Sonic Generations (Console), Sonic Racing: CrossWorlds",
+        description: "Seaside Hill combines ancient white-stone ruins with a brilliant blue ocean. Players travel along coastal pathways, speed through loops, and navigate structures built above the water."
+    },
+    {
+        year: 2003,
+        game: "Sonic Heroes",
+        name: "Rail Canyon",
+        featured: "Shadow Generations",
+        description: "Rail Canyon is an enormous network of railway tracks suspended over a deep rocky canyon. Players grind between rails and avoid trains while traveling across dangerous gaps."
+    },
+    {
+        year: 2003,
+        game: "Sonic Heroes",
+        name: "Casino Park",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Casino Park is a colorful casino-themed environment featuring giant dice, playing cards, pinball tables, and glowing decorations. Its unusual obstacles turn the entire stage into an interactive game."
+    },
+    {
+        year: 2005,
+        game: "Shadow the Hedgehog",
+        name: "Digital Circuit",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Digital Circuit takes place inside a virtual computer network. Glowing data streams, electronic pathways, and abstract digital structures create a futuristic cyberspace environment."
+    },
+    {
+        year: 2005,
+        game: "Sonic Rush",
+        name: "Water Palace",
+        featured: "Sonic Generations (3DS), Sonic Racing: CrossWorlds",
+        description: "Water Palace features elegant architecture surrounded by flowing water. Its fountains, slides, submerged passages, and colorful structures combine beauty with challenging platforming."
+    },
+
+    // MODERN ERA
+    {
+        year: 2006,
+        game: "Sonic Riders",
+        name: "White Cave",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "White Cave is an underground racing environment filled with pale rock formations, unusual vegetation, and ancient-looking natural structures. Its winding routes create opportunities for high-speed Extreme Gear racing."
+    },
+    {
+        year: 2006,
+        game: "Sonic Riders",
+        name: "Metal City",
+        featured: "Sonic Speed Simulator",
+        description: "Metal City is a futuristic urban racing course filled with elevated highways, neon lighting, mechanical structures, and high-speed routes designed for Extreme Gear competition."
+    },
+    {
+        year: 2006,
+        game: "Sonic the Hedgehog (2006)",
+        name: "Crisis City",
+        featured: "Sonic Generations (Console)",
+        description: "Crisis City is a ruined future metropolis surrounded by fire and destruction. Collapsed skyscrapers, lava, and violent storms make it one of Sonic's most dangerous urban environments."
+    },
+    {
+        year: 2006,
+        game: "Sonic the Hedgehog (2006)",
+        name: "Kingdom Valley",
+        featured: "Shadow Generations",
+        description: "Kingdom Valley is a majestic landscape of ancient castles, waterfalls, mountains, and ruined stone pathways. Its dramatic scenery includes high-altitude sections and giant eagles."
+    },
+    {
+        year: 2007,
+        game: "Sonic and the Secret Rings",
+        name: "Kraken Bay",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Kraken Bay is a pirate-themed coastal location featuring wooden ships, stormy waters, maritime structures, and dangerous obstacles inspired by the world of Arabian Nights."
+    },
+    {
+        year: 2007,
+        game: "Sonic and the Secret Rings",
+        name: "Dino Jungle",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Dino Jungle is a prehistoric wilderness filled with towering vegetation, ancient creatures, enormous trees, and winding pathways through a dense jungle."
+    },
+    {
+        year: 2008,
+        game: "Sonic Unleashed",
+        name: "Rooftop Run",
+        featured: "Sonic Generations (Console), Sonic Racing: CrossWorlds",
+        description: "Rooftop Run takes place in a colorful European-inspired city. Sonic races across orange rooftops, narrow streets, clock towers, and steep hills in a lively urban environment."
+    },
+    {
+        year: 2008,
+        game: "Sonic Unleashed",
+        name: "Cool Edge",
+        featured: "Sonic Speed Simulator",
+        description: "Cool Edge is a frozen landscape filled with snow-covered cliffs, icy passages, and dangerous drops. The stage combines slippery surfaces with high-speed movement through an arctic environment."
+    },
+    {
+        year: 2008,
+        game: "Sonic Unleashed",
+        name: "Holoska",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Holoska is a snowy region known for its glaciers, frozen waters, and icy settlements. Its harsh winter environment provides the setting for several challenges in Sonic Unleashed."
+    },
+    {
+        year: 2008,
+        game: "Sonic Unleashed",
+        name: "Dragon Road",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Dragon Road is a mountainous stage inspired by East Asian architecture. Its stone pathways, traditional buildings, and elevated routes create a dramatic high-speed adventure."
+    },
+    {
+        year: 2008,
+        game: "Sonic Unleashed",
+        name: "Apotos",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Apotos is a peaceful seaside village inspired by Mediterranean coastal communities. White buildings, narrow streets, and beautiful ocean views give the region a welcoming atmosphere."
+    },
+    {
+        year: 2009,
+        game: "Sonic and the Black Knight",
+        name: "Misty Lake",
+        featured: "Sonic Racing: CrossWorlds",
+        description: Misty Lake is a mysterious medieval location surrounded by water, ancient ruins, wooden pathways, and thick fog. Its atmosphere is inspired by the legends of King Arthur."
+  }
+{
+   // SONIC COLORS - 2010
+    {
+        year: 2010,
+        game: "Sonic Colors",
+        name: "Planet Wisp",
+        featured: "Sonic Generations (Console)",
+        description: "Planet Wisp is a beautiful alien world filled with green fields, colorful vegetation, and unusual natural structures. Dr. Eggman's industrial machinery threatens the planet's peaceful environment and its native Wisps."
+    },
+    {
+        year: 2010,
+        game: "Sonic Colors",
+        name: "Tropical Resort",
+        featured: "Sonic Generations (3DS)",
+        description: "Tropical Resort is the welcoming entrance to Dr. Eggman's enormous interstellar amusement park. Bright neon signs, colorful attractions, and futuristic structures create a lively entertainment destination in space."
+    },
+    {
+        year: 2010,
+        game: "Sonic Colors",
+        name: "Starlight Carnival",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Starlight Carnival is a spectacular parade of illuminated spacecraft traveling through outer space. Glowing pathways, colorful lights, and enormous ships create a futuristic environment filled with high-speed challenges."
+    },
+    {
+        year: 2010,
+        game: "Sonic Colors",
+        name: "Sweet Mountain",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Sweet Mountain is a colorful amusement park attraction inspired by candy and desserts. Giant cakes, candy decorations, frosting-covered structures, and unusual obstacles give the stage a playful appearance."
+    },
+
+    // SONIC LOST WORLD - 2013
+    {
+        year: 2013,
+        game: "Sonic Lost World",
+        name: "Hidden World",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Hidden World is an unusual environment filled with abstract structures, floating platforms, and colorful geometric designs. Its creative obstacles and unpredictable pathways make exploration especially challenging."
+    },
+    {
+        year: 2013,
+        game: "Sonic Lost World",
+        name: "Lost Hex",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "The Lost Hex is a mysterious floating world containing grassy landscapes, mountains, ancient ruins, and unusual geometric terrain. Sonic explores its environments using movement that allows him to run across curved surfaces."
+    },
+
+    // SONIC MANIA - 2017
+    {
+        year: 2017,
+        game: "Sonic Mania",
+        name: "Mirage Saloon Zone",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Mirage Saloon is a Wild West-inspired desert environment filled with cacti, railway tracks, saloon buildings, and sandy canyons. The stage includes exciting train sequences and airborne adventures aboard Tails' Tornado airplane."
+    },
+
+    // SONIC FORCES - 2017
+    {
+        year: 2017,
+        game: "Sonic Forces",
+        name: "Sunset Heights",
+        featured: "Shadow Generations, Sonic Racing: CrossWorlds",
+        description: "Sunset Heights is a city damaged by Dr. Eggman's invasion. Burning skies, ruined buildings, military obstacles, and dangerous robots create the atmosphere of a city caught in conflict."
+    },
+    {
+        year: 2017,
+        game: "Sonic Forces",
+        name: "Metro City",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Metro City is a futuristic urban environment filled with towering buildings, glowing lights, highways, and industrial structures. Its mechanical obstacles and elevated pathways create a challenging city landscape."
+    },
+    {
+        year: 2017,
+        game: "Sonic Forces",
+        name: "Lost Valley",
+        featured: "Sonic Speed Simulator",
+        description: "Lost Valley is a rocky desert environment marked by damaged structures, sandy terrain, and dangerous mechanical enemies. Its harsh landscape reflects the destruction caused by Eggman's forces."
+    },
+    {
+        year: 2017,
+        game: "Sonic Forces",
+        name: "Mystic Jungle",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Mystic Jungle is a dense forest filled with towering trees, winding pathways, mysterious ruins, and glowing natural features. Its unusual scenery creates an adventurous and sometimes dangerous environment."
+    },
+
+    // TEAM SONIC RACING - 2019
+    {
+        year: 2019,
+        game: "Team Sonic Racing",
+        name: "Sky Road",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Sky Road is a racing course suspended high above the clouds. Floating pathways, elevated tracks, and impressive views of the sky create an exciting environment for high-speed racing."
+    },
+
+    // SONIC FRONTIERS - 2022
+    {
+        year: 2022,
+        game: "Sonic Frontiers",
+        name: "Chaos Island",
+        featured: "Shadow Generations",
+        description: "Chaos Island is a volcanic region of the Starfall Islands. Dark rocky landscapes, ancient ruins, lava-filled areas, and mysterious technology make it one of the more dangerous islands Sonic explores."
+    },
+    {
+        year: 2022,
+        game: "Sonic Frontiers",
+        name: "Kronos Island",
+        featured: "Sonic Speed Simulator, Sonic Racing: CrossWorlds",
+        description: "Kronos Island is a vast natural environment filled with grassy hills, ancient ruins, forests, and mysterious structures. Its open-zone design allows Sonic to explore large areas and discover hidden challenges."
+    },
+    {
+        year: 2022,
+        game: "Sonic Frontiers",
+        name: "Cyber Space",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Cyber Space is a digital dimension containing virtual environments created from memories and information. Its glowing structures and recreated Sonic stages provide fast-paced platforming challenges."
+    },
+
+    // SONIC SUPERSTARS - 2023
+    {
+        year: 2023,
+        game: "Sonic Superstars",
+        name: "Speed Jungle",
+        featured: "Sonic Speed Simulator",
+        description: "Speed Jungle is a lush tropical rainforest filled with giant trees, vines, winding pathways, and natural obstacles. Sonic races through its dense vegetation while navigating the jungle's unusual terrain."
+    },
+    {
+        year: 2023,
+        game: "Sonic Superstars",
+        name: "Cyber Station",
+        featured: "Sonic Speed Simulator",
+        description: "Cyber Station is a colorful digital environment filled with geometric platforms, electronic obstacles, and futuristic technology. Its unusual mechanics can transform characters into different digital forms."
+    },
+    {
+        year: 2023,
+        game: "Sonic Superstars",
+        name: "Sky Temple",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Sky Temple is an ancient sanctuary located high above the clouds. Floating ruins, stone platforms, and strong winds create a mysterious and challenging aerial environment."
+    },
+    {
+        year: 2023,
+        game: "Sonic Superstars",
+        name: "Bridge Island",
+        featured: "Sonic Racing: CrossWorlds",
+        description: "Bridge Island is a beautiful tropical coastal environment featuring sandy beaches, palm trees, rocky cliffs, and bright ocean scenery. Its winding pathways and loops provide an exciting introduction to Sonic Superstars."
+    }
