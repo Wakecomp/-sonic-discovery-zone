@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Official Artwork | Sonic Discovery Zone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Sonic Official Artwork Gallery */
+
+        .artwork-page {
+            width: min(1050px, 94%);
+            margin: 25px auto;
+        }
+
+        .artwork-page section {
+            margin-bottom: 25px;
+            padding: 22px;
+
+            background: linear-gradient(
+                135deg,
+                #07104e 0%,
+                #152575 55%,
+                #2949b5 100%
+            );
+
+            border: 3px solid #ffe500;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .artwork-page h2 {
+            color: #ffe500;
+            border-bottom: 2px solid #73dfff;
+            padding-bottom: 10px;
+        }
+
+        /* Gallery Layout */
+
+        .artwork-gallery {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Artwork Cards */
+
+        .artwork-card {
+            background: linear-gradient(
+                180deg,
+                #1769d8,
+                #07145e
+            );
+
+            border: 2px solid #ffe500;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+
+            box-shadow: 0 0 12px #00bfff;
+        }
+
+        .artwork-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+
+            background: #06104c;
+            border: 2px solid #73dfff;
+            border-radius: 5px;
+        }
+
+        .artwork-card h3 {
+            color: #ffe500;
+            font-size: 1rem;
+            margin: 12px 0 5px;
+        }
+
+        .artwork-card p {
+            color: #e5faff;
+            font-size: 0.85rem;
+        }
+
+        /* Placeholder Images */
+
+        .artwork-placeholder {
+            height: 220px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(
+                135deg,
+                #06227e,
+                #168de8,
+                #05105a
+            );
+
+            border: 2px dashed #73dfff;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Hover Effect */
+
+        .artwork-card:hover {
+            box-shadow: 0 0 20px #ffe500;
+            transform: translateY(-4px);
+        }
+
+        .artwork-card {
+            transition: transform 0.2s,
+                        box-shadow 0.2s;
+        }
+
+        /* Mobile Layout */
+
+        @media (max-width: 600px) {
+            .artwork-page section {
+                padding: 14px;
+            }
+
+            .artwork-gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SONIC OFFICIAL ARTWORK GALLERY</h1>
+    <p>★ Celebrating Sonic's Official Art! ★</p>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="zones.html">Zones</a>
+        <a href="games.html">Games</a>
+        <a href="visual-content.html">Visual Content</a>
+        <a href="comics.html">Comics</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="fanart.html">Fanart</a>
+    </nav>
+</header>
+
+<main class="artwork-page">
+
+    <section>
+        <h2>Welcome to the Official Artwork Gallery!</h2>
+
+        <p>
+            Welcome to Sonic Discovery Zone's
+            official artwork gallery!
+            This section celebrates the
+            amazing artwork created for
+            Sonic the Hedgehog games,
+            characters, and promotional events.
+        </p>
+
+        <p>
+            Explore Sonic artwork from
+            different eras, including
+            classic illustrations,
+            Sonic Adventure designs,
+            modern promotional artwork,
+            and special anniversary art.
+        </p>
+    </section>
+
+    <!-- CLASSIC ARTWORK -->
+
+    <section>
+        <h2>★ Classic Sonic Artwork ★</h2>
+
+        <p>
+            Artwork inspired by the
+            original Sonic games
+            from the Sega Genesis era.
+        </p>
+
+        <div class="artwork-gallery">
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Classic Sonic Artwork
+                    Coming Soon!
+                </div>
+                <h3>Classic Sonic</h3>
+                <p>1990s Sonic illustrations</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Classic Tails Artwork
+                    Coming Soon!
+                </div>
+                <h3>Classic Tails</h3>
+                <p>Early Tails character artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Classic Knuckles Artwork
+                    Coming Soon!
+                </div>
+                <h3>Classic Knuckles</h3>
+                <p>Classic-era character artwork</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SONIC ADVENTURE ARTWORK -->
+
+    <section>
+        <h2>★ Sonic Adventure Era Artwork ★</h2>
+
+        <p>
+            Explore artwork inspired by
+            Sonic Adventure, Sonic Adventure 2,
+            and the early 2000s Sonic era.
+        </p>
+
+        <div class="artwork-gallery">
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Adventure Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Adventure</h3>
+                <p>Dreamcast-era promotional artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Shadow Artwork
+                    Coming Soon!
+                </div>
+                <h3>Shadow the Hedgehog</h3>
+                <p>Sonic Adventure 2 character artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Heroes Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Heroes</h3>
+                <p>Team-based promotional illustrations</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- MODERN ARTWORK -->
+
+    <section>
+        <h2>★ Modern Sonic Artwork ★</h2>
+
+        <p>
+            Artwork from Sonic's modern
+            adventures, featuring new
+            character designs and
+            promotional illustrations.
+        </p>
+
+        <div class="artwork-gallery">
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Unleashed Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Unleashed</h3>
+                <p>Promotional game artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Colors Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Colors</h3>
+                <p>Colorful interstellar illustrations</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Generations Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Generations</h3>
+                <p>Classic and Modern Sonic artwork</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- RECENT ARTWORK -->
+
+    <section>
+        <h2>★ Recent Sonic Artwork ★</h2>
+
+        <p>
+            Explore artwork inspired by
+            Sonic's newer adventures
+            and special celebrations.
+        </p>
+
+        <div class="artwork-gallery">
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Frontiers Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Frontiers</h3>
+                <p>Starfall Islands promotional artwork</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Sonic Superstars Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Superstars</h3>
+                <p>Classic-style modern illustrations</p>
+            </article>
+
+            <article class="artwork-card">
+                <div class="artwork-placeholder">
+                    Anniversary Artwork
+                    Coming Soon!
+                </div>
+                <h3>Sonic Anniversary Artwork</h3>
+                <p>Special anniversary illustrations</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ARTWORK CREDITS -->
+
+    <section>
+        <h2>★ Artwork Credits ★</h2>
+
+        <p>
+            Sonic the Hedgehog and its
+            characters are owned by SEGA.
+            This is an unofficial
+            fan-created website.
+        </p>
+
+        <p>
+            Artwork will be added
+            with appropriate source
+            information and permission
+            where required.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Sonic Discovery Zone | Fan Website</p>
+    <p>
+        This is an unofficial fan website
+        and is not affiliated with SEGA.
+    </p>
+</footer>
+
+</body>
+</html>
